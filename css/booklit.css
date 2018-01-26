@@ -1,0 +1,235 @@
+html {
+  display: flex;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Lora', 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code, pre {
+  font-family: 'Source Code Pro', monospace;
+  font-size: .9em;
+}
+
+pre {
+  background: #eee;
+  padding: .5rem;
+  display: inline-block;
+  min-width: 450px;
+}
+
+code code {
+  font-size: 1em;
+}
+
+.page code {
+  background: #eee;
+  padding: .1em .2em;
+  white-space: nowrap;
+}
+
+.page code code, .definition-thumb code {
+  border: 0;
+  padding: 0;
+}
+
+.page a code {
+  color: #432E2B;
+}
+
+.page a:hover code strong {
+  text-decoration: underline;
+}
+
+h1 code, h2 code, h3 code {
+  font-weight: 600;
+  font-size: .9em;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px dotted #eee;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h2, h3 {
+  margin-top: 2rem;
+}
+
+.page.top h1 {
+  font-size: 32px;
+  border-bottom: 0;
+}
+
+.page {
+  padding: 2rem;
+  padding-top: 0;
+  background: #fff;
+}
+
+.page p {
+  width: 450px;
+}
+
+.side {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  width: 200px;
+  background: #eee;
+  padding: 1rem;
+  color: #888;
+}
+
+.side a {
+  color: #555;
+}
+
+.side .context {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.side .context a.self {
+  font-weight: lighter;
+  color: #000;
+  text-decoration: underline;
+}
+
+.side .context .top {
+  padding-left: 1.2rem;
+  font-size: 1.1em;
+}
+
+.side .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.4rem;
+  z-index: 2;
+  opacity: 0;
+}
+
+.side .toggle:focus {
+  outline: none;
+}
+
+.side .arrow:after, .side .toggle:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\25ba";
+  line-height: 1.4rem;
+  font-size: .75rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.side .toggle:checked + .arrow:after {
+  content: "\25bc";
+}
+
+.side .toggle:not(:checked) + .arrow + .children {
+  display: none;
+}
+
+.side .children {
+  border-left: 1px solid #403430;
+  margin-left: .35rem;
+  padding-left: .8rem;
+}
+
+.side .children table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.side table td {
+  vertical-align: top;
+}
+
+.section-number {
+  margin-right: .4rem;
+}
+
+.definition-thumb {
+  width: 450px;
+}
+
+.definition-thumb a {
+  color: inherit;
+}
+
+.definition-thumb a:hover {
+  text-decoration: underline;
+}
+
+.definition-content {
+  border-bottom: 1px dotted #EAD2A4;
+  padding: 0 0 1em 1em;
+  margin-bottom: 2rem;
+}
+
+.definition-content:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.page {
+  position: relative;
+}
+
+.aside {
+  border-left: 2px solid #EFB198;
+  padding: 0 1em;
+}
+
+@media (min-width: 961px) {
+  .aside {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    width: 200px;
+    background: rgba(255, 255, 255, .25);
+    position: absolute;
+    right: -200px;
+  }
+}
